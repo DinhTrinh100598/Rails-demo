@@ -1,0 +1,15 @@
+<style>
+	.text {padding: 100px;}
+</style>
+ <table>
+ 	<tr>
+ 		<td><%= image_tag @products.image %></td>
+ 		<td class="text ">
+ 		<p><%= @products.name  %></p>
+ 		<hr>
+ 		<p><%= number_to_currency @products.price %></p>
+ 		<hr>
+ 		<p><%= button_to 'Thêm Vào Giỏ Hàng ',carts_path(:product_id => @product), :remote => 'true'  %></p>
+ 		</td>
+ 	</tr>
+ </table>
